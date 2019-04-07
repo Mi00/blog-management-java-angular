@@ -25,18 +25,18 @@ public class BlogController {
         return blogRepository.findAll();
     }
 
-    @GetMapping("/users/{id}")
+    @GetMapping("/blogs/{id}")
     public ResponseEntity<Blog> getBlogById(@PathVariable(value = "id") Long blogId) throws ResourceNotFoundException {
         Blog blog = blogRepository.findById(blogId).orElseThrow(() -> new ResourceNotFoundException("Blog not found on ::" + blogId));
         return ResponseEntity.ok().body(blog);
     }
 
-    @PostMapping("/users")
+    @PostMapping("/blogs")
     public Blog createBlog(@Valid @RequestBody Blog blog){
         return blogRepository.save(blog);
     }
 
-    @PutMapping("/users/{id}")
+    @PutMapping("/blogs/{id}")
     public ResponseEntity<Blog> updateBlog(@PathVariable(value = "id") Long blogId, @Valid @RequestBody Blog blogDetails) throws ResourceNotFoundException {
         Blog blog = blogRepository.findById(blogId).orElseThrow(() -> new ResourceNotFoundException("Blog not found on ::" + blogId));
 
@@ -47,6 +47,7 @@ public class BlogController {
         return ResponseEntity.ok(updatedBlog);
     }
 
+    @DeleteMapping("/blogs/{id}")
     public Map<String, Boolean> deleteBlog(@PathVariable(value = "id") Long blogId) throws Exception {
         Blog blog = blogRepository.findById(blogId).orElseThrow(() -> new ResourceNotFoundException("Blog not found on ::" + blogId));
 
