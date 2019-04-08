@@ -1,0 +1,14 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.single-input {
+  width: 25%;
+}
+
+.text-input {
+  width: 50%;
+}

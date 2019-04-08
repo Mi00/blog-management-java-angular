@@ -4,6 +4,7 @@
       <mat-card-title>{{blog.title}}</mat-card-title>
       <mat-card-subtitle>Autor: {{blog.createdBy}}</mat-card-subtitle>
       <mat-card-subtitle>Utworzony: {{blog.createdAt | date:'d-M-yyyy'}}</mat-card-subtitle>
+      {{blog.id}}
     </mat-card-header>
     <mat-card-content class="align-center">
       <p>
@@ -11,8 +12,8 @@
       </p>
     </mat-card-content>
     <mat-card-actions class="align-bottom">
-      <button mat-button>Rozwiń</button>
-      <button mat-button>Edytuj</button>
+      <button mat-raised-button color="primary">Rozwiń</button>
+      <button mat-raised-button color="primary" routerLink="/blogs/edit/{{blog.id}}">Edytuj</button>
     </mat-card-actions>
   </mat-card>
 </div>

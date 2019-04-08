@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BlogsComponent } from './blogs.component';
 import { ListComponent } from './list/list.component';
+import { BlogFormComponent } from './blog-form/blog-form.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,14 @@ const routes: Routes = [
       {
         path: 'list',
         component: ListComponent
+      },
+      {
+        path: 'new',
+        component: BlogFormComponent
+      },
+      {
+        path: 'edit/:id',
+        component: BlogFormComponent
       }
     ]
   }
