@@ -41,7 +41,7 @@ public class Blog {
         this.title = title;
     }
 
-    @Column(name = "body", nullable = false)
+    @Column(name = "body", columnDefinition = "LONGTEXT", nullable = false)
     public String getBody() {
         return body;
     }
