@@ -14,7 +14,6 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.blogService.getAll().subscribe(data => {
       this.blogs = data;
-      console.log(data)
     });
   }
 

@@ -1,3 +1,18 @@
-<p>
-  list works!
-</p>
+<div class="list">
+  <mat-card class="blog-card" *ngFor="let blog of blogs">
+    <mat-card-header class="card-header">
+      <mat-card-title>{{blog.title}}</mat-card-title>
+      <mat-card-subtitle>Autor: {{blog.createdBy}}</mat-card-subtitle>
+      <mat-card-subtitle>Utworzony: {{blog.createdAt | date:'d-M-yyyy'}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="align-center">
+      <p>
+        {{ (blog.body.length>300)? (blog.body | slice:0:300)+'..':(blog.body) }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="align-bottom">
+      <button mat-button>Rozwiń</button>
+      <button mat-button>Edytuj</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -9,6 +9,6 @@ export class BlogService {
   }
 
   getAll(): Observable<any> {
-    return this.http.get('//localhost:8080/blogs');
+    return this.http.get('//localhost:8080/api/v1/blogs');
   }
 }
