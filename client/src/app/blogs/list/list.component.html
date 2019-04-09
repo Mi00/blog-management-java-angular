@@ -11,8 +11,8 @@
       <div *ngIf="blog.body.length>=300" [innerHTML]="blog.body.slice(0, 300)+ '...'"></div>
     </mat-card-content>
     <mat-card-actions class="align-bottom">
-      <button mat-raised-button color="primary">Rozwiń</button>
-      <button mat-raised-button color="primary" routerLink="/blogs/edit/{{blog.id}}">Edytuj</button>
+      <button mat-raised-button color="warn">Pokaż</button>
+      <button mat-raised-button color="accent" routerLink="/blogs/edit/{{blog.id}}">Edytuj</button>
     </mat-card-actions>
   </mat-card>
 </div>
