@@ -1,0 +1,13 @@
+<div class="h-100 w-100">
+  <mat-card class="align-middle">
+      <mat-card-header class="card-header">
+        <mat-card-title>{{blog.title}}</mat-card-title>
+        <mat-card-subtitle>Autor: {{blog.createdBy}}</mat-card-subtitle>
+        <mat-card-subtitle>Utworzony: {{blog.createdAt | date:'d-M-yyyy'}}</mat-card-subtitle>
+      </mat-card-header>    
+      
+      <mat-card-content>    
+          <div [innerHTML]="blog.body"></div>  
+      </mat-card-content>    
+  </mat-card>
+</div>

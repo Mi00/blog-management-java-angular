@@ -12,9 +12,10 @@ import { NgxEditorModule } from 'ngx-editor';
 import { BlogsComponent } from './blogs.component';
 import { ListComponent } from './list/list.component';
 import { BlogFormComponent } from './blog-form/blog-form.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
-  declarations: [BlogsComponent, ListComponent, BlogFormComponent],
+  declarations: [BlogsComponent, ListComponent, BlogFormComponent, BlogComponent],
   imports: [
     CommonModule,
     BlogsRoutingModule,

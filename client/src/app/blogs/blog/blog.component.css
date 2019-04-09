@@ -1,0 +1,28 @@
+mat-card {
+  width: 80%;
+  height: 60%%;
+  text-align: center;
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-header {
+  max-width: 50%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-card-content {
+  font-size: 1.2em;
+  margin: 2em;
+}
+
+mat-card-title {
+  font-size: 2em !important;
+}
+
+mat-card-subtitle {
+  font-size: 1.2em !important;
+}

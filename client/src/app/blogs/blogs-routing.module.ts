@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BlogsComponent } from './blogs.component';
 import { ListComponent } from './list/list.component';
 import { BlogFormComponent } from './blog-form/blog-form.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,10 @@ const routes: Routes = [
       {
         path: 'edit/:id',
         component: BlogFormComponent
+      },
+      {
+        path: ':id',
+        component: BlogComponent
       }
     ]
   }
