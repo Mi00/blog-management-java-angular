@@ -1,20 +1,29 @@
-<form #blogForm="ngForm" (ngSubmit)="onSubmit(blogForm.value)">
-  <h1>{{blog.id ? 'Edycja wpisu' : 'Dodaj wpis'}} </h1>
-  <mat-form-field class="single-input">
-    <input matInput placeholder="Tytuł" name="title" [(ngModel)]="blog.title">
-  </mat-form-field>
-  
-  <mat-form-field class="single-input" *ngIf="!blog.id">
-    <input matInput placeholder="Autor" name="createdBy" [(ngModel)]="blog.createdBy">
-  </mat-form-field>
-  
-  <mat-form-field class="single-input" *ngIf="blog.id">
-    <input matInput placeholder="Zaktualizował" name="createdBy" [(ngModel)]="blog.createdBy">
-  </mat-form-field>
-
-  <mat-form-field class="text-input">
-    <textarea matInput matTextareaAutosize matAutosizeMinRows=5 matAutosizeMaxRows=15 placeholder="Treść bloga" name="body" [(ngModel)]="blog.body"></textarea>
-  </mat-form-field>
-  
-  <button type="submit" mat-fab color="primary">Zapisz</button>
-</form>
+<div class="h-100 w-100">
+  <mat-card class="align-middle">
+      <mat-card-title>    
+          <h2>{{blog.id ? 'Edycja wpisu' : 'Dodaj wpis'}}</h2> 
+      </mat-card-title>    
+      
+      <mat-card-content>    
+          <form #blogForm="ngForm" (ngSubmit)="onSubmit(blogForm.value)">    
+            <mat-form-field class="title">
+              <input matInput placeholder="Tytuł" name="title" [(ngModel)]="blog.title">
+            </mat-form-field>
+            
+            <mat-form-field *ngIf="!blog.id">
+              <input matInput placeholder="Autor" name="createdBy" [(ngModel)]="blog.createdBy">
+            </mat-form-field>  
+            
+            <mat-form-field *ngIf="blog.id">
+              <input matInput placeholder="Zaktualizował" name="createdBy" [(ngModel)]="blog.createdBy">
+            </mat-form-field> 
+            
+            <div class="text-left">
+              <app-ngx-editor [config]="editorConfig" name="body" [(ngModel)]="blog.body"></app-ngx-editor>
+            </div>
+            
+            <button type="submit" mat-raised-button color="primary">Zapisz</button> 
+          </form>    
+      </mat-card-content>    
+  </mat-card>
+</div>

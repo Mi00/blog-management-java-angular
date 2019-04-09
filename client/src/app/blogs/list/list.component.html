@@ -4,12 +4,11 @@
       <mat-card-title>{{blog.title}}</mat-card-title>
       <mat-card-subtitle>Autor: {{blog.createdBy}}</mat-card-subtitle>
       <mat-card-subtitle>Utworzony: {{blog.createdAt | date:'d-M-yyyy'}}</mat-card-subtitle>
-      {{blog.id}}
     </mat-card-header>
+    <img mat-card-image src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png" alt="Photo of a Shiba Inu">
     <mat-card-content class="align-center">
-      <p>
-        {{ (blog.body.length>300)? (blog.body | slice:0:300)+'..':(blog.body) }}
-      </p>
+      <div *ngIf="blog.body.length<300" [innerHTML]="blog.body.slice(0, 300)"></div>
+      <div *ngIf="blog.body.length>=300" [innerHTML]="blog.body.slice(0, 300)+ '...'"></div>
     </mat-card-content>
     <mat-card-actions class="align-bottom">
       <button mat-raised-button color="primary">Rozwiń</button>

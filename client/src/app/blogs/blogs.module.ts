@@ -7,6 +7,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule, MatButtonModule } from '@angular/material';
 import { FormsModule, FormGroup, ReactiveFormsModule }   from '@angular/forms';
+import { NgxEditorModule } from 'ngx-editor';
 
 import { BlogsComponent } from './blogs.component';
 import { ListComponent } from './list/list.component';
@@ -23,7 +24,8 @@ import { BlogFormComponent } from './blog-form/blog-form.component';
     MatInputModule,
     MatButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxEditorModule
   ]
 })
 export class BlogsModule { }

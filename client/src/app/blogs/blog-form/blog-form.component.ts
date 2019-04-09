@@ -14,6 +14,21 @@ export class BlogFormComponent implements OnInit {
   blog: any = {};
   
   sub: Subscription;
+  
+  editorConfig = {
+    "editable": true,
+    "spellcheck": true,
+    "height": "auto",
+    "minHeight": "600px",
+    "width": "auto",
+    "minWidth": "1000px",
+    "enableToolbar": true,
+    "showToolbar": true,
+    "placeholder": "Wprowadź tekst",
+    "toolbar": [
+        ["bold", "underline"]
+    ]
+  };
 
   constructor(private blogService: BlogService,
               private router: Router,
