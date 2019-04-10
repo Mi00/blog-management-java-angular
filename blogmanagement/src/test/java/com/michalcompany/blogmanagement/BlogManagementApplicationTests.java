@@ -15,8 +15,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = BlogmanagementApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class BlogmanagementApplicationTests {
+@SpringBootTest(classes = BlogManagementApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class BlogManagementApplicationTests {
 
 	@Autowired
 	private TestRestTemplate restTemplate;
