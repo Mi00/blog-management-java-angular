@@ -5,7 +5,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/blogs',
+    redirectTo: '/blogs/list',
     pathMatch: 'full'
   },
   {
