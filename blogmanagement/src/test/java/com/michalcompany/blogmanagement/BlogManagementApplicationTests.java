@@ -45,9 +45,6 @@ public class BlogManagementApplicationTests {
 	@Test
 	public void testGetBlogById(){
 		Blog blog = restTemplate.getForObject(getRootUrl() + "/blogs/1", Blog.class);
-		System.out.println(blog.getTitle());
-		System.out.println(blog.getBody());
-		System.out.println(blog.getTitle());
 		assertNotNull(blog);
 	}
 
