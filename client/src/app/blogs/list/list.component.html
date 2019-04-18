@@ -13,6 +13,7 @@
     <mat-card-actions class="align-bottom">
       <button mat-raised-button color="warn" routerLink="/blogs/{{blog.id}}">Pokaż</button>
       <button mat-raised-button color="accent" routerLink="/blogs/edit/{{blog.id}}">Edytuj</button>
+      <button mat-raised-button color="primary" (click)="deleteBlog(blog.id)">Usuń</button>
     </mat-card-actions>
   </mat-card>
 </div>

@@ -12,8 +12,19 @@ export class ListComponent implements OnInit {
   constructor(private blogService: BlogService) { }
 
   ngOnInit() {
+    this.getBlogs();
+  }
+  
+  getBlogs(){
     this.blogService.getAll().subscribe(data => {
       this.blogs = data;
+    });
+  }
+  
+  deleteBlog(id){
+    this.blogService.delete(id).subscribe((data)=>{
+         console.log("success");
+         this.getBlogs();
     });
   }
 

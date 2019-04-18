@@ -26,4 +26,8 @@ export class BlogService {
     }
     return result;
   }
+  
+  delete(id: string) {
+    return this.http.delete(this.API_BASE + '/' + id);
+  }
 }
